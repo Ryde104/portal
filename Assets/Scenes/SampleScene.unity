@@ -5268,6 +5268,7 @@ MonoBehaviour:
   player: {fileID: 1079942260}
   reciever: {fileID: 1011307990}
   target: {fileID: 1079942254}
+  otherRotate: {fileID: 1011307990}
   playerIsOverlapping: 0
 --- !u!1 &435120070
 GameObject:
@@ -5763,6 +5764,7 @@ MonoBehaviour:
   player: {fileID: 1079942260}
   reciever: {fileID: 84033715}
   target: {fileID: 1079942254}
+  otherRotate: {fileID: 0}
   playerIsOverlapping: 0
 --- !u!65 &822028283
 BoxCollider:
@@ -5930,7 +5932,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011307989}
-  m_LocalRotation: {x: 0.70598906, y: 0.00003080235, z: -0.000030899802, w: 0.7082227}
+  m_LocalRotation: {x: 0.7071068, y: 0.00003085112, z: -0.00003085112, w: 0.7071068}
   m_LocalPosition: {x: 1.941, y: 2.63, z: 0.417}
   m_LocalScale: {x: 0.013450769, y: 0.0032341904, z: 0.4166168}
   m_Children:
@@ -5939,7 +5941,7 @@ Transform:
   - {fileID: 435120071}
   m_Father: {fileID: 1054514274}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 89.81901, y: 0, z: -0.0050000004}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: -0.0050000004}
 --- !u!1 &1054514273
 GameObject:
   m_ObjectHideFlags: 0
@@ -7105,6 +7107,7 @@ MonoBehaviour:
   fpsCam1: {fileID: 963194227}
   Portal1: {fileID: 84033714}
   Portal2: {fileID: 1011307989}
+  Player: {fileID: 0}
 --- !u!1 &1684960381
 GameObject:
   m_ObjectHideFlags: 0

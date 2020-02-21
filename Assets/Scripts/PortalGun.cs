@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Portal : MonoBehaviour
+public class PortalGun : MonoBehaviour
 {
     public Camera fpsCam1;
     private RaycastHit LastRaycastHit;
     public GameObject Portal1;
     public GameObject Portal2;
-    
+    public GameObject Player;
+
 
     public object GetLookedAtObject()
     {

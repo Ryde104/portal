@@ -8,7 +8,7 @@ public class porterTeleporter : MonoBehaviour
     public Transform player;
     public Transform reciever;
     public GameObject target;
-
+    public Transform otherRotate;
 
     public bool playerIsOverlapping = false;
 
@@ -18,18 +18,19 @@ public class porterTeleporter : MonoBehaviour
         transform.Rotate(Vector3.right * Time.deltaTime);
         if (playerIsOverlapping)
         {
-            StartCoroutine(Portal());
+            
             Vector3 portalToPlayer = player.position - transform.position;
             float dotProduct = Vector3.Dot(transform.up, portalToPlayer);
 
             // If this is true: The player has moved across the portal
             if (dotProduct < 0f)
             {
+               // transform.forward = new Vector3(otherRotate.transform.forward.x, transform.forward.y, otherRotate.transform.forward.z);
 
                 // Teleport him!
                 float rotationDiff = Quaternion.Angle(transform.rotation, reciever.rotation);
                 rotationDiff += 180;
-                player.Rotate(Vector3.up, rotationDiff);
+                //player.Rotate(Vector3.up, rotationDiff);
                 //transform.rotation = Quaternion.Lerp(transform.rotation, target.transform.rotation, Time.deltaTime * 1);
                 
 
@@ -55,11 +56,6 @@ public class porterTeleporter : MonoBehaviour
         {
             playerIsOverlapping = false;
         }
-    }
-    IEnumerator Portal()
-    {
-        yield return new WaitForSeconds(0.3f);
-
     }
 }
     
